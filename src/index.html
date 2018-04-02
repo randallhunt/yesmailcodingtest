@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <title>Coding test requirement #4</title>
+  <style type="text/css">
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  .main {
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    posiion: auto;
+    width: 100vw;
+  }
+
+  .left {
+    box-sizing: border-box;
+    height: 100%;
+    position: absolute;
+    width: 450px;
+  }
+
+  .left .top {
+    background: pink;
+    box-sizing: border-box;
+    height: 150px;
+    padding: 1em;
+  }
+
+  .left .bottom {
+    background: lightblue;
+    box-sizing: border-box;
+    height: calc(100vh - 150px);
+    overflow: scroll;
+    padding: 1em;
+  }
+
+  .right {
+    background: lightgray;
+    box-sizing: border-box;
+    height: 100%;
+    margin-left: 450px;
+    min-width: 200px;
+    padding: 1em;
+  }
+
+  p {
+    margin: 1em;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="left">
+      <div class="top">
+        <p>height: 150px</p>
+        <p>width: 450px</p>
+      </div>
+
+      <div class="bottom">
+        <p>height: fill remaining vertical space</p>
+        <p>width: 450px</p>
+        <p>The contents of this element may be taller than the area, but it should not affect the size of the area.</p>
+        <p>The contents should be vertically scrollable, if necessary.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec convallis tristique sagittis. Nullam ac viverra purus, vel consectetur libero. Phasellus laoreet mollis tellus, ac vehicula quam congue sed. Aliquam dignissim tristique metus et dignissim. Ut bibendum blandit nisi, quis dictum risus. Sed commodo magna leo, nec ultrices tortor auctor eu. Aenean aliquam, ipsum vel tristique volutpat, nulla ipsum semper ex, quis aliquam ipsum ligula vel erat. Sed sagittis pellentesque velit, in suscipit sem mollis nec.</p>
+
+        <p>Integer gravida, erat vel mattis pellentesque, lacus metus sollicitudin ex, eget bibendum dolor urna ut ipsum. Integer aliquet at quam sit amet consequat. Pellentesque mauris velit, rutrum sit amet orci vel, dapibus fringilla massa. Suspendisse laoreet lobortis porta. Vestibulum quam lectus, interdum sit amet orci vel, hendrerit viverra augue. Maecenas scelerisque tincidunt suscipit. Nam euismod nibh sit amet odio efficitur commodo.</p>
+
+        <p>Etiam ut felis et tortor consequat aliquam at et tortor. Vivamus egestas eu nibh sit amet consequat. Curabitur aliquam ipsum pretium nulla vehicula feugiat. Sed a ultricies dui, ut pretium neque. Nunc at auctor arcu. Nullam ornare arcu erat, eget hendrerit urna dictum ac. Aliquam iaculis nibh purus, ut ullamcorper erat commodo non. Suspendisse nec quam lacinia, semper nibh sit amet, interdum arcu. Proin eu nisl odio. Etiam mattis tristique justo, vitae imperdiet sapien aliquet eget. Etiam eu placerat nulla, et vulputate velit. Praesent a suscipit urna, vitae pretium nulla. Etiam dignissim pulvinar aliquam. Cras vel varius tellus.</p>
+
+        <p>Morbi augue nisi, pharetra nec vehicula gravida, consectetur a est. Curabitur imperdiet vulputate tortor pellentesque dapibus. Phasellus aliquam mauris eget nisi pretium imperdiet. Nulla interdum molestie nisi laoreet malesuada. Nullam blandit eleifend libero eget consectetur. Aliquam lacus orci, venenatis in ex rhoncus, vehicula dictum orci. Praesent euismod cursus euismod. Ut vel euismod arcu. Sed nec tempor sapien, vitae vehicula ex.</p>
+
+        <p>Proin ornare consectetur risus. Nam ligula urna, ultrices at viverra nec, porttitor nec felis. Quisque in molestie arcu. Sed tincidunt eleifend finibus. Curabitur mollis lobortis diam, vitae maximus sapien suscipit vitae. Mauris dolor urna, fringilla vitae purus ut, sodales pellentesque elit. Vestibulum id tempus metus, eget eleifend sapien. Aliquam ut ultrices ex, et ullamcorper justo. Quisque et massa eu urna luctus tristique ac a eros. Pellentesque aliquam, erat eget iaculis suscipit, lectus nulla auctor arcu, eget congue sapien lacus at leo. Cras sapien odio, iaculis eget convallis ac, scelerisque sodales diam. Phasellus at lorem mi. Donec luctus mattis lacinia. Ut vel lobortis ante, quis ornare libero. Sed condimentum metus sed porttitor vestibulum. Vestibulum eu blandit est.</p>
+      </div>
+    </div>
+
+    <div class="right">
+      <p>height: fill vertical space</p>
+      <p>width: fill remaining horizontal space</p>
+      <p>minimum width: 200px</p>
+    </div>
+  </div>
+</body>
+</html>

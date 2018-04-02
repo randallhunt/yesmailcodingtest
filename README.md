@@ -14,3 +14,8 @@ run `npm test` to execute the unit tests
 Robot code is located in src/robot
 
 The example can be run by executing `npm run robot` at the command line.
+
+## Requirement 5
+The HTML/CSS layout can be found in src/index.html
+
+CSS is written into the HTML file, simply for brevity.
