@@ -1,4 +1,4 @@
-# yesmailcodingtest
+# YesMail Coding Test
 Coding test for YesMail
 
 
