@@ -11,4 +11,6 @@ run `npm install` first, in order to get the mocha and chai libraries installed,
 run `npm test` to execute the unit tests
 
 ## Requirement 3
+Robot code is located in src/robot
 
+The example can be run by executing `npm run robot` at the command line.

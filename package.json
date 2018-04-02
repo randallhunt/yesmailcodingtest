@@ -4,6 +4,7 @@
   "description": "Coding test for YesMail",
   "main": "children-example.js",
   "scripts": {
+    "robot": "node robot-example",
     "start": "node index",
     "test": "mocha"
   },
