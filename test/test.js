@@ -6,7 +6,7 @@ describe('buildCollection', () => {
   it('should build a collection of children based on an input collection of parents', () => {
     let input = [{ 'name': 'foo', parent: 'bar' }];
     let output = lib.buildCollection(input);
-    expect(output).to.deep.equal([ {name: 'foo', children: []}, {name: 'bar', children:[{ name: 'foo', children:[] }]} ]);
+    expect(output).to.deep.equal([ {name: 'bar', children:[{ name: 'foo', children:[] }]} ]);
   });
 });
 

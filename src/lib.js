@@ -5,7 +5,7 @@ function buildCollection(arr) {
   // find all top level names
   arr.map((item) => {
     let names = getNames(output);
-    output = addName(item.name, output);
+    // output = addName(item.name, output);
     output = addName(item.parent, output);
   });
 
@@ -33,7 +33,7 @@ function addChild(item, collection) {
   let person = getByName(item.parent, collection);
   let names = getNames(output);
   let index = names.indexOf(item.parent);
-  if (index) {
+  if (index > -1) {
     let child = getByName(item.parent, collection);
     if (child) {
       output[index].children.push({ name: item.name, children:[] });
