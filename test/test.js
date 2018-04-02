@@ -4,7 +4,9 @@ const lib = require('../src/lib');
 
 describe('buildCollection', () => {
   it('should build a collection of children based on an input collection of parents', () => {
-    expect('a').to.equal('b');
+    let input = [{ 'name': 'foo', parent: 'bar' }];
+    let output = lib.buildCollection(input);
+    expect(output).to.deep.equal([ {name: 'foo', children: []}, {name: 'bar', children:[{ name: 'foo', children:[] }]} ]);
   });
 });
 
@@ -18,8 +20,12 @@ describe('addName', () => {
 describe('addChild', () => {
   it('should add a child based on the data of a parent', () => {
     let data = { name: 'foo', parent: 'bar' };
-    let output = lib.addChild(data, [{ name: 'bar', children: [] }]);
-    expect(output).to.deep.equal([ {name: 'bar', children: [{ name: 'foo', parent: 'bar' }]} ]);
+    let array = [{name: 'foo', children: []}, {name: 'bar', children: []}];
+    let output = lib.addChild(data, array);
+    expect(output).to.deep.equal([
+      {name: 'foo', children: []},
+      {name: 'bar', children: [{ name: 'foo', children: []}]}
+    ]);
   });
 });
 
